@@ -37,27 +37,29 @@ export default function Hero() {
             <div className="absolute bottom-[20%] right-[15%] w-96 h-96 bg-amber-500/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen animate-pulse" style={{ animationDuration: '6s' }} />
 
             <div className="hero-content relative z-10 w-full max-w-[900px]">
-                <h1 className="hero-title flex justify-center items-end">
-                    {titleText.split('').map((char, index) => (
-                        <motion.span
-                            key={index}
-                            initial={{ y: 100, opacity: 0, rotate: 5 }}
-                            animate={{ y: 0, opacity: 1, rotate: 0 }}
-                            transition={{ duration: 0.8, delay: index * 0.1, ease: [0.215, 0.610, 0.355, 1.000] }}
-                            className="inline-block"
-                        >
-                            {char}
-                        </motion.span>
-                    ))}
-                    <motion.span
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 0.5, delay: titleText.length * 0.1 + 0.2, type: 'spring' }}
-                        className="text-orange-500 inline-block"
-                    >
-                        .
-                    </motion.span>
-                </h1>
+<h1 className="hero-title flex justify-center items-end">
+    {titleText.split('').map((char, index) => (
+        <motion.span
+            key={index}
+            initial={{ y: 100, opacity: 0, rotate: 5 }}
+            animate={{ y: 0, opacity: 1, rotate: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.1, ease: [0.215, 0.610, 0.355, 1.000] }}
+            className="inline-block"
+            style={{ color: 'var(--color--beige)' }} 
+        >
+            {char}
+        </motion.span>
+    ))}
+    <motion.span
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5, delay: titleText.length * 0.1 + 0.2, type: 'spring' }}
+        className="inline-block"
+        style={{ color: 'var(--color--orange)' }} 
+    >
+        .
+    </motion.span>
+</h1>
 
                 <motion.p
                     initial={{ y: 40, opacity: 0 }}
