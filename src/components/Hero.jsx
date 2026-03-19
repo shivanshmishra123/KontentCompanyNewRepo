@@ -45,7 +45,7 @@ export default function Hero() {
             animate={{ y: 0, opacity: 1, rotate: 0 }}
             transition={{ duration: 0.8, delay: index * 0.1, ease: [0.215, 0.610, 0.355, 1.000] }}
             className="inline-block"
-            style={{ color: 'var(--color--beige)' }} 
+            style={{ color: 'var(--color-beige)' }} 
         >
             {char}
         </motion.span>
@@ -55,7 +55,7 @@ export default function Hero() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5, delay: titleText.length * 0.1 + 0.2, type: 'spring' }}
         className="inline-block"
-        style={{ color: 'var(--color--orange)' }} 
+        style={{ color: 'var(--color-orange)' }} 
     >
         .
     </motion.span>
